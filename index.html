@@ -6,6 +6,7 @@
 <title>Qada Prayer – Muslim Tracker | Support</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+<style>
   :root {
     --emerald: #1a4a3a;
     --emerald-mid: #2d6b54;
@@ -132,7 +133,6 @@
     text-transform: uppercase;
     color: var(--gold-light);
     margin-bottom: 1.5rem;
-    animation: fadeUp 0.8s ease both;
   }
 
   .hero h1 {
@@ -142,7 +142,6 @@
     line-height: 1.05;
     letter-spacing: -0.01em;
     margin-bottom: 1.5rem;
-    animation: fadeUp 0.8s 0.1s ease both;
   }
 
   .hero h1 em {
@@ -156,7 +155,6 @@
     line-height: 1.75;
     font-size: 1rem;
     margin-bottom: 2.5rem;
-    animation: fadeUp 0.8s 0.2s ease both;
   }
 
   .hero-cta {
@@ -164,7 +162,6 @@
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
-    animation: fadeUp 0.8s 0.3s ease both;
   }
 
   .btn-gold {
@@ -456,9 +453,14 @@
   }
 
   .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-in.hidden {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
   }
 
   .fade-in.visible { opacity: 1; transform: translateY(0); }
@@ -706,3 +708,21 @@
     item.querySelector('.faq-q').addEventListener('click', () => {
       item.classList.toggle('open');
     });
+  });
+
+  // Scroll fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.05 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Form submit
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('form-success').style.display = 'block';
+    e.target.reset();
+  }
+</script>
+</body>
+</html>
