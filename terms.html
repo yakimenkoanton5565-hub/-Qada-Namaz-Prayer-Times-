@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terms of Use – Qada Namaz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E8D08A;
+      --bg: #1A3728;
+      --surface: #1F4030;
+      --border: rgba(201,168,76,0.2);
+      --text: #F0EBE0;
+      --muted: #7A9A88;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* Background pattern */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201,168,76,0.08) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 80px 32px 100px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 64px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #2A4A38, #1A3728);
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+      box-shadow: 0 0 30px rgba(201,168,76,0.1);
+    }
+
+    .logo-mark svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    header h1 span {
+      color: var(--gold);
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .last-updated {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 6px 16px;
+      border-radius: 20px;
+      background: rgba(201,168,76,0.08);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--gold-light);
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--gold-light);
+      margin-bottom: 16px;
+      padding-left: 16px;
+      border-left: 2px solid var(--gold);
+    }
+
+    p {
+      color: #BDB5A6;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 12px 0 16px;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 20px;
+      color: #BDB5A6;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    ul li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+    }
+
+    /* Highlight box */
+    .highlight {
+      background: rgba(201,168,76,0.05);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 20px 0;
+    }
+
+    .highlight p {
+      margin-bottom: 0;
+    }
+
+    /* Subscription table */
+    .sub-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+
+    .sub-table th {
+      text-align: left;
+      padding: 10px 16px;
+      background: rgba(201,168,76,0.08);
+      color: var(--gold-light);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sub-table td {
+      padding: 10px 16px;
+      color: #BDB5A6;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .sub-table tr:last-child td { border-bottom: none; }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+      transition: border-color 0.2s;
+    }
+
+    a:hover { border-color: var(--gold); }
+
+    /* Divider */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding-top: 48px;
+      border-top: 1px solid var(--border);
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    footer a { font-size: 13px; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo-mark">
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 3C8.477 3 4 7.477 4 13C4 18.523 8.477 23 14 23C19.523 23 24 18.523 24 13C24 7.477 19.523 3 14 3Z" stroke="#C9A84C" stroke-width="1.5"/>
+        <path d="M14 7V13L18 16" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M7 3.5C7 3.5 10 5 14 5C18 5 21 3.5 21 3.5" stroke="#C9A84C" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+      </svg>
+    </div>
+    <h1>Qada Namaz – <span>Prayer Times</span></h1>
+    <p class="subtitle">Terms of Use &amp; End-User License Agreement</p>
+    <span class="last-updated">Last updated: March 18, 2026</span>
+  </header>
+
+  <section>
+    <h2>1. Agreement</h2>
+    <p>By downloading, installing, or using <strong>Qada Namaz – Prayer Times</strong> ("the App"), you agree to be bound by these Terms of Use. If you do not agree to these terms, do not use the App.</p>
+    <p>The App is licensed, not sold, to you by <strong>PrimeTestLab</strong> ("Developer") for use strictly in accordance with these Terms.</p>
+  </section>
+
+  <section>
+    <h2>2. License</h2>
+    <p>The Developer grants you a limited, non-exclusive, non-transferable, revocable license to use the App on any Apple-branded or Android device that you own or control, solely for your personal, non-commercial use.</p>
+    <p>You may not:</p>
+    <ul>
+      <li>Copy, modify, or distribute the App or any part of it</li>
+      <li>Reverse engineer or attempt to extract the source code</li>
+      <li>Rent, lease, or lend the App to any third party</li>
+      <li>Use the App for any unlawful purpose</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. Auto-Renewable Subscriptions</h2>
+    <p>The App offers the following auto-renewable subscription plans:</p>
+
+    <table class="sub-table">
+      <tr>
+        <th>Plan</th>
+        <th>Duration</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>Monthly Premium</td>
+        <td>1 month</td>
+        <td>$2.99 / month</td>
+      </tr>
+      <tr>
+        <td>Yearly Premium</td>
+        <td>1 year</td>
+        <td>$12.99 / year</td>
+      </tr>
+      <tr>
+        <td>Lifetime Premium</td>
+        <td>Lifetime (one-time)</td>
+        <td>$29.99</td>
+      </tr>
+    </table>
+
+    <div class="highlight">
+      <p>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current billing period. Your account will be charged for renewal within 24 hours prior to the end of the current period. You can manage and cancel your subscriptions in your device's Account Settings after purchase.</p>
+    </div>
+
+    <p>Any unused portion of a free trial period will be forfeited when you purchase a subscription. Prices may vary by region and are subject to change.</p>
+  </section>
+
+  <section>
+    <h2>4. Free Trial</h2>
+    <p>The App may offer a free trial period for premium features. At the end of the free trial, the subscription will automatically convert to a paid subscription unless cancelled before the trial ends.</p>
+  </section>
+
+  <section>
+    <h2>5. Payments &amp; Refunds</h2>
+    <p>All purchases are processed through the Apple App Store or Google Play Store. Billing is handled entirely by the respective platform. For refund requests, please contact Apple or Google directly through their standard support channels.</p>
+  </section>
+
+  <section>
+    <h2>6. User Data &amp; Privacy</h2>
+    <p>Your use of the App is also governed by our <a href="https://yakimenkoanton5565-hub.github.io/-Qada-Namaz-Prayer-Times-/privacy">Privacy Policy</a>. By using the App, you consent to the collection and use of data as described in the Privacy Policy.</p>
+    <p>The App collects location data to calculate accurate prayer times for your area. Location data is processed on-device and is not transmitted to our servers.</p>
+  </section>
+
+  <section>
+    <h2>7. Disclaimer of Warranties</h2>
+    <p>The App is provided "as is" without warranty of any kind, express or implied. Prayer times are calculated based on established Islamic jurisprudence methods and geolocation data, but the Developer does not guarantee absolute accuracy. Users are advised to verify times with local religious authorities when required.</p>
+  </section>
+
+  <section>
+    <h2>8. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by applicable law, the Developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the App.</p>
+  </section>
+
+  <section>
+    <h2>9. Changes to These Terms</h2>
+    <p>The Developer reserves the right to modify these Terms at any time. Continued use of the App after any changes constitutes acceptance of the new Terms. We will notify users of significant changes through the App or via App Store/Google Play update notes.</p>
+  </section>
+
+  <section>
+    <h2>10. Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with applicable law. Any disputes arising under these Terms shall be resolved through good-faith negotiation or, if necessary, through the appropriate legal channels.</p>
+  </section>
+
+  <section>
+    <h2>11. Contact</h2>
+    <p>If you have any questions about these Terms, please contact us:</p>
+    <p>📧 <a href="mailto:yakimenkoanton5565@icloud.com">yakimenkoanton5565@icloud.com</a></p>
+    <p>🌐 <a href="https://yakimenkoanton5565-hub.github.io/-Qada-Namaz-Prayer-Times-/">yakimenkoanton5565-hub.github.io/-Qada-Namaz-Prayer-Times-</a></p>
+  </section>
+
+  <footer>
+    <p>© 2026 PrimeTestLab. All rights reserved.</p>
+    <p><a href="https://yakimenkoanton5565-hub.github.io/-Qada-Namaz-Prayer-Times-/">Home</a> &nbsp;·&nbsp; <a href="https://yakimenkoanton5565-hub.github.io/-Qada-Namaz-Prayer-Times-/privacy">Privacy Policy</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
